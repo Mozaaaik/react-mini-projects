@@ -1,0 +1,69 @@
+
+.App {
+  margin:          0px;
+  padding:         0px;
+  width:           100%;
+  display:         flex;
+  flex-direction:  column;
+  align-items:     center;
+  justify-content: center;
+}
+
+.main {
+  display:         flex;
+  width:           500px;
+  flex-direction:  column;
+  align-items:     center;
+  justify-content: center;
+}
+
+.todo-create {
+  display:         flex;
+  width:           100% ;
+  flex-direction:  column;
+  align-items:     flex-end;
+  justify-content: center;
+}
+
+.todo-input {
+  width:         100%;
+  padding:       10px 0px;
+  border:        none;
+  border-bottom: 1px solid lightgrey;
+  outline:       none;
+}
+
+.todo-button {
+  margin-top:       10px;
+  padding:          10px 12px;
+  border:           none;
+  border-radius:    5px;
+  background-color: aquamarine; 
+  font-weight:      700;
+  cursor:           pointer;  
+}
+
+.checkSquare {
+  font-size:      21px;
+  margin-right:   7px;
+  margin-bottom:  2px;
+  cursor:         pointer;
+
+}
+
+.toDo {
+  display:          flex;
+  flex-direction:   row;
+  align-items:      center;
+  justify-content:  space-between;
+  border:           1.4px solid lightgrey;
+  margin-top:       6px;
+  padding:          10px;
+}
+
+.todo-icons {
+  font-size:    25px;
+  margin-right: 7px;
+  cursor:       pointer;
+
+}
