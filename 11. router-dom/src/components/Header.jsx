@@ -4,10 +4,10 @@ import { Link } from "react-router-dom"
 function Header() {
   return (
     <div className='header'>
-        <Link className='link' to="/">Anasayfa</Link> 
-       <Link className='link' to="/about">Hakkında</Link>  {/*  Birisi hakkındaya basarsa about url'ine yolla */}
-        <Link className='link' to="/products">Ürünlerimiz</Link>
-        <Link className='link' to="/contact">İletişim</Link>
+      <Link className='link' to="/">Anasayfa</Link>
+      <Link className='link' to="/about">Hakkında</Link>  {/*  Birisi hakkındaya basarsa about url'ine yolla */}
+      <Link className='link' to="/products">Ürünlerimiz</Link>
+      <Link className='link' to="/contact">İletişim</Link>
     </div>
   )
 }

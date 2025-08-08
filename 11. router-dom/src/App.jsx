@@ -9,6 +9,7 @@ import NotFoundPage from './pages/NotFoundPage'
 import Header from './components/Header'
 import EmployeeAbout from './pages/EmployeeAbout'
 import CompanyAbout from './pages/CompanyAbout'
+import ProductDetails from './pages/ProductDetails'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='company' element={<CompanyAbout/>} />
         </Route>
         <Route path='/products' element={<Products />} />
+        <Route path='/product-details/:id' element={<ProductDetails />} />{/* Product.jsx de butona tıklayınca bu url ye geliriz geldiğinde ProductDETAİLSİ Gösterir*/}
         <Route path='/contact' element={<Contact />} />
         <Route path='*' element={<NotFoundPage />} />   {/* Eğer url'deki adresle bir eşleşme olmazsa NotFoundPage'i göster */}
       </Routes>

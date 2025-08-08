@@ -61,3 +61,26 @@ export default userList.reducer
 
 
 */
+
+/*
+        🧠 Ne Oluyor?
+        getAllUsers oluşturulurken 'users' etiketi veriyoruz:
+
+
+        createAsyncThunk('users', async () => {...})
+        Redux Toolkit bu etiketten şu type’ları otomatik üretir:
+
+        users/pending
+
+        users/fulfilled
+
+        users/rejected
+
+        builder.addCase(getAllUsers.fulfilled, ...) yazdığında:
+
+        getAllUsers.fulfilled.type aslında "users/fulfilled"’dir.
+
+        Yani “type değeri 'users/fulfilled' olan action gelirse bu kodu çalıştır” demek.
+
+
+*/

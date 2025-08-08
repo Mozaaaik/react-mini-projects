@@ -9,7 +9,7 @@ function About() {
       <Link style={{marginRight:"10px"}} to="employee">Çalışanlar Hakkında</Link>
       <Link to="company">Şirket Hakkında</Link>
 
-      <Outlet/>
+       <Outlet/>   {/* 🔥 Buraya EmployeeAbout veya CompanyAbout gelecek! alt route buraya gelsin demek */}
     </div>
   )
 }
