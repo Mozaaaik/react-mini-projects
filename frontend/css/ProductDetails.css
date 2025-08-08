@@ -1,0 +1,53 @@
+.product-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.product-details img {
+    width: 37vh;
+    height: 54vh;
+}
+
+.description-tp {
+    margin: 50px 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.price {
+    color: rgb(255, 102, 0);
+    font-size: 35px;
+
+}
+
+.description {
+    font-size: 20px;
+}
+
+.iconButton {
+  display: flex;
+  justify-content: flex-start; /* sola yaslar */
+  align-items: center; /* dikey ortalama */
+  gap: 10px; /* +, 0, - butonları ve Sepete Ekle arasında boşluk */
+}
+
+.plus-minus {
+    display: flex;
+    flex-direction: row;
+    font-size: 35px;
+    justify-content: start;
+}
+
+.icon {
+    margin-right: 15px;
+    font-size: 37px;
+}
+
+.details-button {
+    width: 140px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(67, 67, 67);
+    color: #fff;
+}

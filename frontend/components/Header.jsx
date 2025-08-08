@@ -5,9 +5,11 @@ import { IoMoonSharp } from "react-icons/io5"
 import { FiSun } from "react-icons/fi"
 import logoMoon from '../src/images/logoMoon.png'
 import logoSun from '../src/images/logoSun.png'
+import { useNavigate } from 'react-router-dom'
 
 function Header() {
   const [theme, setTheme] = useState(false)
+  const navigate = useNavigate()
 
   const changeTheme = () => {
     setTheme((prevTheme) => {
@@ -29,8 +31,9 @@ function Header() {
   return (
     <div className='my-header'>
       <div className='flex-row'>
-        <img className="logo" src={theme ? logoMoon : logoSun} alt="Shopverse Logo" />
-        <p className='logo-text'>Shopverse</p>
+        <img className="logo" onClick={() => navigate('/')} src={theme ? logoMoon : logoSun} alt="Shopverse Logo" />
+        <h1 style={{ fontFamily: 'Arial' }}>S</h1>
+        <p className='logo-text'>hopverse</p>
       </div>
 
       <div className='flex-row'>

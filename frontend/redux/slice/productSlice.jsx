@@ -17,9 +17,13 @@ export const getAllProducts = createAsyncThunk('getAllProducts', async () => {
 export const counterSlice = createSlice({
   name: 'products',
   initialState,
-  reducers: {
 
+  reducers: {
+    setSelectedProduct: (state, action) => {
+      state.selectedProduct = action.payload
+    }
   },
+
   extraReducers: (builder) => {
     builder.addCase(getAllProducts.pending, (state) => {
       state.loading = true
@@ -33,6 +37,18 @@ export const counterSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { } = counterSlice.actions
+export const { setSelectedProduct } = counterSlice.actions
 
 export default counterSlice.reducer
+
+/*
+
+  Sen dispatch(setSelectedProduct(product)) dediğinde:
+
+  product objesi payload oluyor.
+
+  Reducer’da action.payload dediğinde bu product objesini alıyorsun.
+
+  Sonra state.selectedProduct = action.payload ile store’daki değeri değiştiriyorsun.
+
+*/
