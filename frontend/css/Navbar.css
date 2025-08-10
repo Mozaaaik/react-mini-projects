@@ -1,0 +1,17 @@
+.cart-row {
+    display: grid;
+    grid-template-columns: 70px 1fr 90px 64px;
+    align-items: center;
+    column-gap: 12px;
+    padding: 14px 15px;
+
+}
+
+.cart-row img{
+  width:60px; height:70px; object-fit:contain;
+}
+
+.cart-row button {
+    width: 70px;
+}
+

@@ -6,10 +6,16 @@ import { FiSun } from "react-icons/fi"
 import logoMoon from '../src/images/logoMoon.png'
 import logoSun from '../src/images/logoSun.png'
 import { useNavigate } from 'react-router-dom'
+import Badge from '@mui/material/Badge';
+import { useDispatch, useSelector } from 'react-redux'
+import { setDrawer } from '../redux/slice/basketSlice'
 
 function Header() {
   const [theme, setTheme] = useState(false)
   const navigate = useNavigate()
+
+  const { products } = useSelector((store) => store.basket)
+  const dispatch = useDispatch()
 
   const changeTheme = () => {
     setTheme((prevTheme) => {
@@ -38,11 +44,14 @@ function Header() {
 
       <div className='flex-row'>
         <input className='search-input' type='text' placeholder='Bir şeyler ara' />
-        <div>
+        <div className='flex-row'>
           {theme
             ? <FiSun className='icon' onClick={changeTheme} />
             : <IoMoonSharp className='icon' onClick={changeTheme} />}
-          <SlBasket className='icon' />
+
+          <Badge onClick={() => { dispatch(setDrawer()) }} badgeContent={products.length} color="error">
+            <SlBasket className='icon' />
+          </Badge>
         </div>
       </div>
     </div>

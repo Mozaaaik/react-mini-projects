@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { setSelectedProduct } from '../redux/slice/productSlice'
+import { addToBasket } from '../redux/slice/basketSlice'
 import '../css/ProductDetails.css'
 import { BiPlusCircle } from "react-icons/bi";
 import { LuCircleMinus } from "react-icons/lu";
@@ -25,9 +26,13 @@ function ProductDetails() {
     }
 
     const decrement = () => {
-        setCount(count-1)
+        setCount(count - 1)
     }
 
+    const addBasket = () => {
+        const payload = { id, title, price, image, description, count }
+        dispatch(addToBasket(payload))
+    }
 
     const dispatch = useDispatch()
 
@@ -54,9 +59,12 @@ function ProductDetails() {
                 <h4 className='price'>{price}</h4>
                 <div className='iconButton'>
                     <div className='plus-minus'>
-                        <BiPlusCircle onClick={ increment } className='icon' /> <span style={{ marginRight: '15px' }}>{count}</span> <LuCircleMinus onClick={ decrement } className='icon' />
+                        <BiPlusCircle onClick={increment} className='icon' /> <span style={{ marginRight: '15px' }}>{count}</span> <LuCircleMinus onClick={decrement} className='icon' />
                     </div>
-                    <button className='details-button'>Sepete ekle</button>
+                    <button
+                        className='details-button'
+                        onClick={addBasket}
+                    >Sepete ekle</button>
                 </div>
             </div>
         </div>
