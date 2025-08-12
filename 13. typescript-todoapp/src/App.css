@@ -1,0 +1,57 @@
+body {
+  padding:         0;
+  margin:          0;
+  width:           100%;
+  display:         flex;
+  flex-direction:  column;
+  justify-content: center;
+  align-items:     center;
+}
+
+.todo-create {
+  width:           500px;
+  display:         flex;
+  flex-direction:  column;
+  justify-content: center;
+  align-items:     flex-end;
+  margin-top:      20px;
+}
+
+.todo-input {
+  width:           100%;
+  border:          none;
+  border-bottom:   1px solid lightgray;
+  outline:         none;
+}
+
+.todo-button {
+  border:            none;
+  padding:           5px 10px;
+  color:            black;
+  background-color: yellow;
+  border-radius:     4px;
+  font-weight:       700;
+  cursor:            pointer;
+  margin-top:        10px;
+}
+
+/* Todo.tsx */
+.todo {
+  display:             flex;
+  flex-direction:      row;
+  justify-content:     space-between;
+  align-items:         center;
+  border: 1px solid  lightgray;
+  padding:             16px;
+  margin-top:          20px;
+  border-radius:       5px;
+}
+
+.icons {
+  font-size:           22px;
+  cursor:              pointer; 
+}
+
+.myTodo {
+  width: 70vh;
+}
